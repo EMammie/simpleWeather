@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4401A7BA18E5309E0044F3B7 /* WXViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 4401A7B718E5309E0044F3B7 /* WXViewController.h */; };
-		4401A7BB18E5309E0044F3B7 /* WXViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = 4401A7B818E5309E0044F3B7 /* WXViewController.m */; };
-		446EEB0618E5262600EFD13F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446EEB0518E5262600EFD13F /* Foundation.framework */; };
+		4401A7CD18E53D190044F3B7 /* WXViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 4401A7C318E53B250044F3B7 /* WXViewController.h */; };
+		4401A7CE18E53E950044F3B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446EEB0518E5262600EFD13F /* Foundation.framework */; };
+		4401A7CF18E53EA00044F3B7 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 446EEB1418E5262600EFD13F /* AppDelegate.h */; };
+		4401A7D118E53EDA0044F3B7 /* WXViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = 4401A7C418E53B250044F3B7 /* WXViewController.m */; };
 		446EEB0818E5262600EFD13F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446EEB0718E5262600EFD13F /* CoreGraphics.framework */; };
 		446EEB0A18E5262600EFD13F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446EEB0918E5262600EFD13F /* UIKit.framework */; };
 		446EEB1018E5262600EFD13F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 446EEB0E18E5262600EFD13F /* InfoPlist.strings */; };
@@ -35,8 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4401A7B718E5309E0044F3B7 /* WXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = file; path = WXViewController.h; sourceTree = "<group>"; };
-		4401A7B818E5309E0044F3B7 /* WXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = file; path = WXViewController.m; sourceTree = "<group>"; };
+		4401A7C318E53B250044F3B7 /* WXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = file; name = WXViewController.h; path = ViewControllers/WXViewController.h; sourceTree = "<group>"; };
+		4401A7C418E53B250044F3B7 /* WXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = file; name = WXViewController.m; path = ViewControllers/WXViewController.m; sourceTree = "<group>"; };
 		446EEB0218E5262600EFD13F /* simpleWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		446EEB0518E5262600EFD13F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		446EEB0718E5262600EFD13F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,9 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4401A7CE18E53E950044F3B7 /* Foundation.framework in Frameworks */,
 				446EEB0818E5262600EFD13F /* CoreGraphics.framework in Frameworks */,
 				446EEB0A18E5262600EFD13F /* UIKit.framework in Frameworks */,
-				446EEB0618E5262600EFD13F /* Foundation.framework in Frameworks */,
 				E7EB968C0A1C406181A9CA56 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,13 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4401A7B918E5309E0044F3B7 /* ViewControllers */ = {
+		4401A7C518E53B250044F3B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4401A7B718E5309E0044F3B7 /* WXViewController.h */,
-				4401A7B818E5309E0044F3B7 /* WXViewController.m */,
+				4401A7C318E53B250044F3B7 /* WXViewController.h */,
+				4401A7C418E53B250044F3B7 /* WXViewController.m */,
 			);
-			path = ViewControllers;
+			name = ViewControllers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		446EEAF918E5262600EFD13F = {
@@ -126,7 +128,7 @@
 		446EEB0B18E5262600EFD13F /* simpleWeather */ = {
 			isa = PBXGroup;
 			children = (
-				4401A7B918E5309E0044F3B7 /* ViewControllers */,
+				4401A7C518E53B250044F3B7 /* ViewControllers */,
 				446EEB1418E5262600EFD13F /* AppDelegate.h */,
 				446EEB1518E5262600EFD13F /* AppDelegate.m */,
 				446EEB1718E5262600EFD13F /* Images.xcassets */,
@@ -242,9 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				446EEB1018E5262600EFD13F /* InfoPlist.strings in Resources */,
-				4401A7BA18E5309E0044F3B7 /* WXViewController.h in Resources */,
 				446EEB1818E5262600EFD13F /* Images.xcassets in Resources */,
-				4401A7BB18E5309E0044F3B7 /* WXViewController.m in Resources */,
+				4401A7CD18E53D190044F3B7 /* WXViewController.h in Resources */,
+				4401A7D118E53EDA0044F3B7 /* WXViewController.m in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4401A7CF18E53EA00044F3B7 /* AppDelegate.h in Sources */,
 				446EEB1618E5262600EFD13F /* AppDelegate.m in Sources */,
 				446EEB1218E5262600EFD13F /* main.m in Sources */,
 			);

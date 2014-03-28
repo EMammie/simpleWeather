@@ -21,7 +21,9 @@
     [self.window makeKeyAndVisible];
     // 2
     [TSMessage setDefaultViewController: self.window.rootViewController];
-    return YES;}
+    return YES;
+
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

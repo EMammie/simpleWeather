@@ -2,7 +2,7 @@
 //  WXViewController.m
 //  
 //
-//  Created by Eugene Mammie on 3/27/14.
+//  Created by Eugene Mammie on 3/28/14.
 //
 //
 
@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.view.backgroundcolor = [UIColor redcolor];
+    self.view.backgroundcolor = [UIColor greencolor];
 }
 
 - (void)didReceiveMemoryWarning
