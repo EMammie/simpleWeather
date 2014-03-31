@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WXManager.h"
 
 @interface WXViewController : UIViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate>
 

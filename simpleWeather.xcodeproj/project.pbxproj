@@ -50,6 +50,7 @@
 		446EEB2118E5262600EFD13F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446EEB0918E5262600EFD13F /* UIKit.framework */; };
 		446EEB2918E5262600EFD13F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 446EEB2718E5262600EFD13F /* InfoPlist.strings */; };
 		446EEB2B18E5262600EFD13F /* simpleWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 446EEB2A18E5262600EFD13F /* simpleWeatherTests.m */; };
+		44EB25A618E91B0A008E2DD6 /* Walt Whitman House 2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 44EB25A518E91B0A008E2DD6 /* Walt Whitman House 2.JPG */; };
 		E7EB968C0A1C406181A9CA56 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DAA433EE6241EFAF2E793E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		446EEB2618E5262600EFD13F /* simpleWeatherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "simpleWeatherTests-Info.plist"; sourceTree = "<group>"; };
 		446EEB2818E5262600EFD13F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		446EEB2A18E5262600EFD13F /* simpleWeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = simpleWeatherTests.m; sourceTree = "<group>"; };
+		44EB25A518E91B0A008E2DD6 /* Walt Whitman House 2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Walt Whitman House 2.JPG"; sourceTree = "<group>"; };
 		70DAA433EE6241EFAF2E793E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56322CBEDC94FE8A2D2B8DC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +160,7 @@
 		4401A7D418E5D2F90044F3B7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				44EB25A518E91B0A008E2DD6 /* Walt Whitman House 2.JPG */,
 				4401A7D518E5D2F90044F3B7 /* bg.png */,
 				4401A7D618E5D2F90044F3B7 /* bg@2x.png */,
 				4401A7D718E5D2F90044F3B7 /* Weather Icons */,
@@ -368,6 +371,7 @@
 				4401A7FE18E5D2F90044F3B7 /* weather-rain-night.png in Resources */,
 				446EEB1018E5262600EFD13F /* InfoPlist.strings in Resources */,
 				4401A7FD18E5D2F90044F3B7 /* weather-moon@2x.png in Resources */,
+				44EB25A618E91B0A008E2DD6 /* Walt Whitman House 2.JPG in Resources */,
 				4401A7FB18E5D2F90044F3B7 /* weather-mist@2x.png in Resources */,
 				4401A80818E5D2F90044F3B7 /* weather-tstorm.png in Resources */,
 				4401A80418E5D2F90044F3B7 /* weather-shower.png in Resources */,

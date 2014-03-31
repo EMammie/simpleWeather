@@ -12,14 +12,31 @@
 
 @interface WXViewController ()
 
+
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, strong) UIImageView *blurredImageView;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, assign) CGFloat screenHeight;
 
+//Formatters
+@property (nonatomic, strong) NSDateFormatter *hourlyFormatter;
+@property (nonatomic, strong) NSDateFormatter *dailyFormatter;
+
 @end
 
 @implementation WXViewController
+
+- (id)init
+{
+    if (self = [super init]) {
+        _hourlyFormatter = [[NSDateFormatter alloc] init];
+        _hourlyFormatter.dateFormat = @"h a";
+        
+        _dailyFormatter = [[NSDateFormatter alloc] init];
+        _dailyFormatter.dateFormat = @"EEEE";
+    }
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -76,7 +93,7 @@
     // 1
     self.screenHeight = [UIScreen mainScreen].bounds.size.height;
     
-    UIImage *background = [UIImage imageNamed:@"bg"];
+    UIImage *background = nil;//[UIImage imageNamed:@"Walt Whitman House 2.JPG"];
     
     // 2
     self.backgroundImageView = [[UIImageView alloc] initWithImage:background];
@@ -189,8 +206,35 @@
          iconView.image = [UIImage imageNamed:[newCondition imageName]];
      }];
 
+    // 1
+    [[RACObserve([WXManager sharedManager], currentCondition)
+      // 2
+      deliverOn:RACScheduler.mainThreadScheduler]
+     subscribeNext:^(WXCondition *newCondition) {
+         // 3
+         temperatureLabel.text = [NSString stringWithFormat:@"%.0f°",newCondition.temperature.floatValue];
+         conditionsLabel.text = [newCondition.condition capitalizedString];
+         cityLabel.text = [newCondition.locationName capitalizedString];
+         
+         // 4
+         iconView.image = [UIImage imageNamed:[newCondition imageName]];
+     }];
+    
+    // 1
+    RAC(hiloLabel, text) = [[RACSignal combineLatest:@[
+                                                       // 2
+                                                       RACObserve([WXManager sharedManager], currentCondition.tempHigh),
+                                                       RACObserve([WXManager sharedManager], currentCondition.tempLow)]
+                             // 3
+                                              reduce:^(NSNumber *hi, NSNumber *low) {
+                                                  return [NSString  stringWithFormat:@"%.0f° / %.0f°",hi.floatValue,low.floatValue];
+                                              }]
+                            // 4
+                            deliverOn:RACScheduler.mainThreadScheduler];
+
     
   [[WXManager sharedManager] findCurrentLocation];
+    
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
