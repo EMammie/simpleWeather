@@ -93,7 +93,7 @@
     // 1
     self.screenHeight = [UIScreen mainScreen].bounds.size.height;
     
-    UIImage *background = nil;//[UIImage imageNamed:@"Walt Whitman House 2.JPG"];
+    UIImage *background = [UIImage imageNamed:@"bg"];
     
     // 2
     self.backgroundImageView = [[UIImageView alloc] initWithImage:background];
