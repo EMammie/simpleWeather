@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "ViewControllers">
+      <FileRef
+         location = "group:ViewControllers/WXViewController.h">
+      </FileRef>
+      <FileRef
+         location = "group:ViewControllers/WXViewController.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:simpleWeather.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
